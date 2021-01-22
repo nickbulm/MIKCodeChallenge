@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import List from './Containers/List.js';
+import Search from './Components/Search.js';
+import data from './tracks.json';
+import {filtered} from "./Functions"
 
 function App() {
+  const [value, setValue] = useState("")
+  let list = filtered(data, value)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Component">
+        <Search val={value} setval={(v) => setValue(v)} />
+        <List tracks={list} sVal={value} />
+      </div>
     </div>
   );
 }
