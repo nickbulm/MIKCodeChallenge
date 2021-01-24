@@ -1,3 +1,21 @@
+@keyframes TrackHover {
+  from {
+    outline: none;
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+    outline-style: auto;
+  }
+}
+@keyframes ButtonHover {
+  from {
+    background: none;
+  }
+  to {
+    background: #79facc;
+  }
+}
 @keyframes Appear {
   from {
     height: 0;
@@ -16,10 +34,10 @@
 }
 @keyframes Inputs {
   from {
-    top: 100%;
+    opacity: 0%;
   }
   to {
-    top: 0px;
+    opacity: 100%;
   }
 }
 .App {
@@ -43,6 +61,10 @@
     height: 11%;
     display: flex;
     justify-content: space-between;
+  }
+  .Component .Search .left:hover {
+    animation-name: Inputs;
+    animation-duration: 0.5s;
   }
   .Component .Search .left:hover .cover {
     display: none;
@@ -180,9 +202,6 @@
   .Component .List .alphabet .alphaList .letter div {
     color: white;
   }
-  .Component .List .alphabet .alphaList .letter div:hover {
-    color: #79facc;
-  }
   .Component .List .Info {
     position: fixed;
     height: 250px;
@@ -215,6 +234,12 @@
     grid-row-end: 3;
     display: flex;
     justify-content: space-between;
+  }
+  .Component .List .Info .artcont .grid2 .play {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: white;
   }
   .Component .List .Info .artcont .grid3 {
     text-align: right;
@@ -304,7 +329,6 @@
     height: 100%;
   }
   .Component .List .Tracks ul .group {
-    margin-bottom: 10px;
     display: inline-block;
   }
   .Component .List .Tracks ul .group ul {
@@ -313,7 +337,6 @@
   .Component .List .Tracks ul li {
     height: 70px;
     width: 100%;
-    margin-top: 10px;
     border-radius: 2px;
   }
   .Component .List .Tracks ul li .grouptitle {
@@ -324,7 +347,7 @@
     display: table-cell;
     width: 100%;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
     color: white;
     font-size: 0.8em;
     font-weight: 600;
@@ -338,6 +361,7 @@
     height: 100%;
     width: 100%;
     padding: 8px;
+    margin-top: 10px;
     display: flex;
     box-sizing: border-box;
   }
@@ -390,6 +414,10 @@
     display: flex;
     justify-content: space-between;
   }
+  .Component .Search .left:hover {
+    animation-name: Inputs;
+    animation-duration: 0.5s;
+  }
   .Component .Search .left:hover .cover {
     display: none;
   }
@@ -426,7 +454,7 @@
     margin: 0px auto 0px auto;
     height: 20px;
     border-radius: 13px;
-    width: 90%;
+    width: 60%;
     background-color: #eee;
     display: grid;
     grid-template-columns: 15% 85%;
@@ -438,7 +466,7 @@
   }
   .Component .Search .left .inputs .search input {
     border: none;
-    width: 80%;
+    width: 85%;
     height: 100%;
     background: none;
     outline: none;
@@ -516,7 +544,7 @@
   .Component .List .Info {
     position: fixed;
     height: 220px;
-    width: 35%;
+    width: 350px;
     left: 32.5%;
     margin: 0px auto 0px auto;
     padding: 8px;
@@ -548,6 +576,12 @@
     display: flex;
     justify-content: space-between;
   }
+  .Component .List .Info .artcont .grid2 .play {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
   .Component .List .Info .artcont .grid3 {
     text-align: right;
     grid-column-start: 4;
@@ -570,6 +604,12 @@
     font-weight: bold;
     line-height: 150%;
     cursor: pointer;
+  }
+  .Component .List .Info .artcont .grid4 .selectSong:hover {
+    color: rgba(40, 40, 40, 0.95);
+    background-color: #79facc;
+    animation-name: ButtonHover;
+    animation-duration: 0.5s;
   }
   .Component .List .Info .text {
     width: 90%;
@@ -680,7 +720,6 @@
     height: 130px;
     margin-bottom: 10px;
     display: flex;
-    margin-right: 15px;
     width: auto;
   }
   .Component .List .Tracks ul .group .grouptitle {
@@ -691,7 +730,7 @@
     display: table-cell;
     vertical-align: middle;
     width: 10px;
-    text-align: center;
+    text-align: right;
     color: white;
     font-size: 0.8em;
     font-weight: 600;
@@ -714,6 +753,14 @@
     width: 130px;
     border-radius: 3px;
     margin-left: 10px;
+  }
+  .Component .List .Tracks ul li .Track:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    outline: 1px solid white;
+    outline-style: auto;
+    box-sizing: border-box;
+    animation-name: TrackHover;
+    animation-duration: 0.3s;
   }
   .Component .List .Tracks ul li .Track {
     padding: 10px;

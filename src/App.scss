@@ -7,7 +7,24 @@ $lightgray: #b2b2b2;
 $teal: #79facc;
 $purple: #744dec;
 $pink: #d141f2; 
-
+@keyframes TrackHover {
+  from {
+    outline:none;
+    box-shadow: none;
+  }
+  to{
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, .4);
+    outline-style: auto;
+  }
+}
+@keyframes ButtonHover {
+  from {
+    background: none;
+  }
+  to {
+    background: $teal;
+  }
+}
 @keyframes Appear {
   from {
     height: 0;
@@ -26,10 +43,10 @@ $pink: #d141f2;
 }
 @keyframes Inputs {
   from {
-    top: 100%;
+    opacity: 0%;
   }
   to {
-    top: 0px;
+    opacity: 100%;
   }
 }
 .App {
@@ -53,11 +70,14 @@ $pink: #d141f2;
       display: flex;
       justify-content: space-between;
       .left:hover {
+        animation-name: Inputs;
+        animation-duration: .5s;
         .cover {
           display: none;
         }
         .inputs {
           display: flex;
+          
         }
       }
       .left {
@@ -190,9 +210,6 @@ $pink: #d141f2;
             div {
               color: white;
             }
-            div:hover {
-              color: $teal;
-            }
           }
         }
       }
@@ -228,6 +245,12 @@ $pink: #d141f2;
             grid-row-end: 3;
             display: flex;
             justify-content: space-between;
+            .play{
+              cursor:pointer;
+              width:24px; 
+              height:24px; 
+              color:white;
+            }
           }
           .grid3 {
             text-align: right;
@@ -317,7 +340,6 @@ $pink: #d141f2;
           overflow-y: auto;
           height: 100%;
           .group{
-            margin-bottom:10px;
             display: inline-block;
             ul{
               overflow-y: visible;
@@ -326,7 +348,6 @@ $pink: #d141f2;
           li {
             height: 70px;
             width: 100%;
-            margin-top: 10px;
             border-radius: 2px;
             .grouptitle {
               display: table;
@@ -335,7 +356,7 @@ $pink: #d141f2;
                 display: table-cell;
                 width: 100%;
                 text-align: center;
-                vertical-align: middle;
+                vertical-align: bottom;
                 color: white;
                 font-size: .8em;
                 font-weight: 600;
@@ -351,6 +372,7 @@ $pink: #d141f2;
               height:100%;
               width:100%;
               padding: 8px;
+              margin-top: 10px;
               display: flex;
               box-sizing:border-box;
               .albart{
@@ -407,6 +429,8 @@ $pink: #d141f2;
       display: flex;
       justify-content: space-between;
       .left:hover {
+        animation-name: Inputs;
+        animation-duration: .5s;
         .cover {
           display: none;
         }
@@ -442,7 +466,7 @@ $pink: #d141f2;
             margin: 0px auto 0px auto;
             height: 20px;
             border-radius: 13px;
-            width: 90%;
+            width: 60%;
             background-color: #eee;
             display: grid;
             grid-template-columns: 15% 85%;
@@ -453,7 +477,7 @@ $pink: #d141f2;
             }
             input{
               border: none;
-              width: 80%;
+              width: 85%;
               height: 100%;
               background: none;
               outline: none;
@@ -536,7 +560,7 @@ $pink: #d141f2;
       .Info {
         position: fixed;
         height: 220px;
-        width: 35%;
+        width: 350px;
         left: 32.5%;
         margin: 0px auto 0px auto;
         padding: 8px;
@@ -567,6 +591,12 @@ $pink: #d141f2;
             grid-row-end: 3;
             display: flex;
             justify-content: space-between;
+            .play{
+              cursor:pointer;
+              width:24px; 
+              height:24px; 
+              color:white;
+            }
           }
           .grid3 {
             text-align: right;
@@ -589,6 +619,12 @@ $pink: #d141f2;
               font-weight: bold;
               line-height: 150%;
               cursor: pointer;
+            }
+            .selectSong:hover {
+              color: rgba(40, 40, 40, .95);
+              background-color: $teal;
+              animation-name: ButtonHover;
+              animation-duration: .5s;
             }
           }
         }
@@ -701,7 +737,6 @@ $pink: #d141f2;
             height: 130px;
             margin-bottom:10px;
             display: flex;
-            margin-right: 15px;
             width: auto;
             .grouptitle {
               display: table;
@@ -710,7 +745,7 @@ $pink: #d141f2;
                 display: table-cell;
                 vertical-align: middle;
                 width: 10px;
-                text-align: center;
+                text-align: right;
                 color: white;
                 font-size: .8em;
                 font-weight: 600;
@@ -735,6 +770,14 @@ $pink: #d141f2;
             width: 130px;
             border-radius: 3px;
             margin-left: 10px;
+            .Track:hover {
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+              outline: 1px solid white;
+              outline-style: auto;
+              box-sizing: border-box;
+              animation-name: TrackHover;
+              animation-duration: .3s;
+            }
             .Track {
               padding: 10px;
               height: 130px;

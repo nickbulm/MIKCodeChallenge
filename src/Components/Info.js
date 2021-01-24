@@ -16,7 +16,7 @@ function Select() {
                 <img src={track.album_art_url} alt="album art" className="albart" />
             </div>
             <div className="grid2">
-                <svg xmlns="http://www.w3.org/2000/svg" cursor="pointer"  width="24" height="24" color="white" fill="currentColor" viewBox="0 0 16 16">
+                <svg className="play" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                     <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
                 </svg>
@@ -31,7 +31,7 @@ function Select() {
                 </svg>
             </div>
             <div className="grid4">
-                <div onClick={() => Select()} className="selectSong" >Select Song</div>
+                <div onClick={() => Select()} className="selectSong" >Select Track</div>
             </div>
         </div>
         <div className="text">

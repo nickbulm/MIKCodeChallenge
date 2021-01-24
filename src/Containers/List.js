@@ -1,14 +1,15 @@
-import React, {useState, createRef} from "react";
+import React, {useState, createRef, useRef} from "react";
 import Track from "../Components/Track";
 import Info from "../Components/Info";
 import {reduceList} from "../Functions";
 function List(props) {
 
-    const [selectedLetter, setselectedLetter] = useState("#")
     const [info, setinfo] = useState(null)
     const [expand, setexpand] = useState(false)
     const [selectedTrack, setselectedTrack] = useState(null)
     
+    const rootRef = useRef()
+
     let alphabet = []
     const toggleExpandTrue = (i) => {
         setexpand(true)
@@ -18,6 +19,7 @@ function List(props) {
         setexpand(false)
         setinfo(null)
     }
+    
     let ref = {}
     let list = []
     let accList = []
@@ -35,7 +37,7 @@ function List(props) {
         accList = reduceList(props.tracks)
         Object.entries(accList).forEach(track => {
             let lett =  track[1].letter
-            ref[lett] = createRef()
+            ref[lett] = createRef(`${lett}`)
             alphabet.push(lett)
             })
         list = Object.entries(accList).map((v) => 
@@ -45,7 +47,7 @@ function List(props) {
                     {v[1].tracks.map((t, index) =>
                         <li className="TrackLi" key={`${v[1].letter}${index}`} onClick={() => toggleExpandTrue(t)}>
                             {selectedTrack === t.id ?
-                                <Track track={t} style={{border: "3px solid white"}} />
+                                <Track track={t} style={{border: "3px solid white", borderRadius: "3px"}} />
                                 :
                                 <Track track={t} />
                             }
@@ -57,23 +59,16 @@ function List(props) {
     }
     
     const scroll = (l) => {
-        setselectedLetter(l)
         ref[l].current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
+            behavior: 'smooth',
+            inline: 'start'
         });
     }
     const letters = alphabet.map(letter => 
         <li className="letter" onClick={() => scroll(letter)} key={letter}>
-            {selectedLetter === letter ?
-                <div style={{color:"#79facc"}}>
-                    {letter}
-                </div>
-            :
-                <div  >
-                    {letter}
-                </div>
-            }
+            <div  >
+                {letter}
+            </div>
         </li>
         )
     return (
@@ -87,7 +82,7 @@ function List(props) {
             </ul>
         </div>
         <div className="Tracks">
-            <ul >
+            <ul ref={rootRef}>
                 {list}
             </ul>
         </div>
