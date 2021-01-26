@@ -558,7 +558,7 @@ $pink: #d141f2;
       box-sizing:border-box;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-evenly;
       .Info {
         position: fixed;
         height: 220px;
@@ -678,9 +678,10 @@ $pink: #d141f2;
         }
       }
       .Tracks {
-        height: 160px;
+        height: 155px;
         width: 100%;
         box-sizing:border-box;
+        
         .TrackLi:nth-child(3n+1){
           .Track {
             background-color: $purple;
@@ -739,8 +740,9 @@ $pink: #d141f2;
           padding-left: 0px;
           overflow-x: auto;
           display: flex;
-          height: 100%;
+          height: 155px;
           width: 100%;
+          margin-top:0px;
           .group{
             height: 140px;
             display: flex;
@@ -781,7 +783,6 @@ $pink: #d141f2;
             .Track {
               height:135px;
               width:135px;
-              box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
               .artcont {
                 .albart{
                   width:55px;

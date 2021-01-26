@@ -10,7 +10,7 @@ function List(props) {
     
     const rootRef = useRef()
 
-    let alphabet = []
+    
     const toggleExpandTrue = (i) => {
         setexpand(true)
         setinfo(i)
@@ -23,6 +23,7 @@ function List(props) {
     let ref = {}
     let list = []
     let accList = []
+    let alphabet = []
     if (props.sVal !== "") {
         list = props.tracks.map((track, index) => 
         <li className="TrackLi" key={index} onClick={() => toggleExpandTrue(track)} >
@@ -33,6 +34,7 @@ function List(props) {
             }
         </li>   
         )
+        alphabet = ["#", "A", "B", "C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     } else {
         accList = reduceList(props.tracks)
         Object.entries(accList).forEach(track => {
