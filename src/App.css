@@ -21,11 +21,9 @@
 @keyframes Appear2 {
   from {
     height: 0;
-    opacity: 0;
   }
   to {
     height: 250px;
-    opacity: 0;
   }
 }
 @keyframes Inputs {
@@ -210,7 +208,7 @@
     display: grid;
     grid-template-rows: 50% 50%;
     animation-name: Appear2;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
   }
   .Component .List .Info .artcont {
     display: grid;

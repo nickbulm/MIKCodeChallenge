@@ -30,11 +30,9 @@ $pink: #d141f2;
 @keyframes Appear2 {
   from {
     height: 0;
-    opacity: 0;
   }
   to {
     height: 250px;
-    opacity: 0;
   }
 }
 @keyframes Inputs {
@@ -221,7 +219,7 @@ $pink: #d141f2;
         display: grid;
         grid-template-rows: 50% 50%;
         animation-name: Appear2;
-        animation-duration: 1s;
+        animation-duration: .5s;
         .artcont{
           display: grid;
           grid-template-columns: 40% 15% 15% 30%;
