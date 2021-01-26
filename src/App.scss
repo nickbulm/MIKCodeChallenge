@@ -7,38 +7,34 @@ $lightgray: #b2b2b2;
 $teal: #79facc;
 $purple: #744dec;
 $pink: #d141f2; 
-@keyframes TrackHover {
-  from {
-    outline:none;
-    box-shadow: none;
-  }
-  to{
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, .4);
-    outline-style: auto;
-  }
-}
 @keyframes ButtonHover {
   from {
     background: none;
+    color: $teal;
   }
   to {
     background: $teal;
+    color: rgba(40, 40, 40, .95);
   }
 }
 @keyframes Appear {
   from {
     height: 0;
+    opacity: 0;
   }
   to {
     height: 220px;
+    opacity: 100%;
   }
 }
 @keyframes Appear2 {
   from {
     height: 0;
+    opacity: 0;
   }
   to {
     height: 250px;
+    opacity: 0;
   }
 }
 @keyframes Inputs {
@@ -302,30 +298,37 @@ $pink: #d141f2;
         height: 100%;
         width: 75%;
         .TrackLi:nth-child(3n+1){
-          background-color: $purple;
-          p{
-            color: white;
-          }
-          .label {
-            color: white;
+          .Track {
+            background-color: $purple;
+            p{
+              color: white;
+            }
+            .label {
+              color: white;
+            }
           }
         }
         .TrackLi:nth-child(3n+2){
-          background-color: $teal;
-          p{
-            color: black;
+          .Track {
+            background-color: $teal;
+            p{
+              color: black;
+            }
+            .label {
+              color: black;
+            }
           }
-          .label {
-            color: black;
-          }
+          
         }
         .TrackLi:nth-child(3n+3){
-          background-color: $pink;
-          p{
-            color: white;
-          }
-          .label {
-            color: white;
+          .Track {
+            background-color: $pink;
+            p{
+              color: white;
+            }
+            .label {
+              color: white;
+            }
           }
         }
         ul::-webkit-scrollbar { 
@@ -548,14 +551,13 @@ $pink: #d141f2;
     .List{
       position: relative;
       vertical-align: bottom;
-      height: 75%;
+      height: 230px;
       width: 100%;
       background-color: $darkgray;
       border-radius: 3px;
       box-sizing:border-box;
       display: flex;
       flex-direction: column;
-      padding: 10px 0 10px 0; 
       justify-content: space-around;
       .Info {
         position: fixed;
@@ -652,7 +654,7 @@ $pink: #d141f2;
       }
       .alphabet {
         background-color: $midgray;
-        height: 18%;
+        height: 40px;
         width: 97%;
         border-radius: 2px;
         margin: 0px auto;
@@ -676,34 +678,41 @@ $pink: #d141f2;
         }
       }
       .Tracks {
-        height: 73%;
+        height: 160px;
         width: 100%;
         box-sizing:border-box;
         .TrackLi:nth-child(3n+1){
-          background-color: $purple;
-          p{
-            color: white;
-          }
-          .label {
-            color: white;
+          .Track {
+            background-color: $purple;
+            p{
+              color: white;
+            }
+            .label {
+              color: white;
+            }
           }
         }
         .TrackLi:nth-child(3n+2){
-          background-color: $teal;
-          p{
-            color: black;
+          .Track {
+            background-color: $teal;
+            p{
+              color: black;
+            }
+            .label {
+              color: black;
+            }
           }
-          .label {
-            color: black;
-          }
+          
         }
         .TrackLi:nth-child(3n+3){
-          background-color: $pink;
-          p{
-            color: white;
-          }
-          .label {
-            color: white;
+          .Track {
+            background-color: $pink;
+            p{
+              color: white;
+            }
+            .label {
+              color: white;
+            }
           }
         }
         ul::-webkit-scrollbar {
@@ -726,7 +735,6 @@ $pink: #d141f2;
           border-radius: 4px;
         }
         ul {
-          margin-top: 3px;
           list-style-type: none;
           padding-left: 0px;
           overflow-x: auto;
@@ -734,8 +742,7 @@ $pink: #d141f2;
           height: 100%;
           width: 100%;
           .group{
-            height: 130px;
-            margin-bottom:10px;
+            height: 140px;
             display: flex;
             width: auto;
             .grouptitle {
@@ -756,35 +763,60 @@ $pink: #d141f2;
               }
             }
             ul {
-              height:130px;
+              height:140px;
               display: flex;
               overflow-x: visible;
-              li {
-                height:130px;
-                margin-left: 10px;
+              li{
+                height: 140px;
+                width: 140px;
+                margin-left: auto;
+                margin-right: auto;
+                display: table;
+                box-sizing: border-box;
               }
             }
           }
-          li {
-            height: 130px;
-            width: 130px;
-            border-radius: 3px;
-            margin-left: 10px;
-            .Track:hover {
-              box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
-              outline: 1px solid white;
-              outline-style: auto;
-              box-sizing: border-box;
-              animation-name: TrackHover;
-              animation-duration: .3s;
-            }
+          .TrackLi:hover {
+            padding:2.5px;
             .Track {
-              padding: 10px;
+              height:135px;
+              width:135px;
+              box-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+              .artcont {
+                .albart{
+                  width:55px;
+                  height: 55px;
+                }
+              }
+              .text {
+                .textRow{
+                  .inf{
+                    font-size: .6em;
+                  }
+                  .label {
+                    font-size: .6em;
+                  }
+                }
+              }
+            }
+          }
+          .TrackLi {
+            height: 140px;
+            width: 140px;
+            border-radius: 3px;
+            display: table;
+            padding:5px;
+            box-sizing: border-box;
+            .Track {
+              padding:8px;
               height: 130px;
               width: 130px;
+              display:table-cell;
               display: grid;
+              vertical-align: middle;
               grid-template-rows: 50%;
               box-sizing:border-box;
+              border-radius: 3px;
               cursor: pointer;
               .artcont {
                 .albart{
