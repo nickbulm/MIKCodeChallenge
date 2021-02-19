@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-
+import '../Stylesheets/Info.css';
 function Info(props) {
     const [track, settrack] = useState(props.track)
     if (track.id !== props.track.id) {

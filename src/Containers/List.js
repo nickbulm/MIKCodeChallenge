@@ -1,4 +1,5 @@
 import React, {useState, createRef, useRef} from "react";
+import '../Stylesheets/List.css';
 import Track from "../Components/Track";
 import Info from "../Components/Info";
 import {reduceList} from "../Functions";

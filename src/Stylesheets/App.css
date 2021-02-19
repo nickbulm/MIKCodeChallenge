@@ -1,0 +1,70 @@
+@keyframes ButtonHover {
+  from {
+    background: none;
+    color: #79facc;
+  }
+  to {
+    background: #79facc;
+    color: rgba(40, 40, 40, 0.95);
+  }
+}
+@keyframes Appear {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 220px;
+    opacity: 100%;
+  }
+}
+@keyframes Appear2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 250px;
+  }
+}
+@keyframes Inputs {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.App {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 575px) {
+  .Component {
+    height: 98%;
+    max-width: 450px;
+    background-color: white;
+    margin: 2% 3% 2% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 575px) {
+  .Component {
+    width: 710px;
+    height: 330px;
+    top: 150px;
+    background-color: #201e20;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

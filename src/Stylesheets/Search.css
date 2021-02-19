@@ -1,0 +1,272 @@
+@keyframes ButtonHover {
+  from {
+    background: none;
+    color: #79facc;
+  }
+  to {
+    background: #79facc;
+    color: rgba(40, 40, 40, 0.95);
+  }
+}
+@keyframes Appear {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 220px;
+    opacity: 100%;
+  }
+}
+@keyframes Appear2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 250px;
+  }
+}
+@keyframes Inputs {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .Search {
+    width: 100%;
+    height: 11%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Search .left:hover {
+    animation-name: Inputs;
+    animation-duration: 0.5s;
+  }
+  .Search .left:hover .cover {
+    display: none;
+  }
+  .Search .left:hover .inputs {
+    display: flex;
+  }
+  .Search .left {
+    height: 100%;
+    width: 48%;
+    background-color: #404040;
+    border-radius: 2px;
+  }
+  .Search .left .inputs {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .Search .left .inputs label {
+    font-size: 1em;
+    color: #79facc;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .left .inputs .search {
+    margin: 0px auto 0px auto;
+    height: 25px;
+    border-radius: 13px;
+    width: 90%;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    text-align: center;
+  }
+  .Search .left .inputs .search svg {
+    margin: 5px 0px 0px 4px;
+    color: rgba(40, 40, 40, 0.95);
+  }
+  .Search .left .inputs .search input {
+    border: none;
+    width: 80%;
+    height: 98%;
+    background: none;
+    outline: none;
+  }
+  .Search .left .cover {
+    height: 100%;
+    width: 100%;
+    display: table;
+  }
+  .Search .left .cover .text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .Search .left .cover .text h4 {
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .left .cover .text .top {
+    color: white;
+  }
+  .Search .left .cover .text .bottom {
+    color: #79facc;
+  }
+  .Search .right {
+    background-color: #b2b2b2;
+    height: 100%;
+    width: 48%;
+    border-radius: 2px;
+    text-align: center;
+    display: table;
+  }
+  .Search .right .text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .Search .right .text h4 {
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .right .text .top {
+    color: white;
+  }
+  .Search .right .text .bottom {
+    color: #744dec;
+  }
+}
+@media (min-width: 575px) {
+  .Search {
+    width: 100%;
+    height: 22%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Search .left:hover {
+    animation-name: Inputs;
+    animation-duration: 0.5s;
+  }
+  .Search .left:hover .cover {
+    display: none;
+  }
+  .Search .left:hover .inputs {
+    display: flex;
+  }
+  .Search .left {
+    height: 100%;
+    width: 49.5%;
+    background-color: #404040;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .Search .left .inputs {
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: Inputs 1s;
+  }
+  .Search .left .inputs label {
+    font-size: 1em;
+    color: #79facc;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .left .inputs .search {
+    margin: 0px auto 0px auto;
+    height: 20px;
+    border-radius: 13px;
+    width: 60%;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    text-align: center;
+  }
+  .Search .left .inputs .search svg {
+    margin: 3px 0px 0px 4px;
+    color: rgba(40, 40, 40, 0.95);
+  }
+  .Search .left .inputs .search input {
+    border: none;
+    width: 85%;
+    height: 100%;
+    background: none;
+    outline: none;
+    font-family: Tahoma;
+    line-height: none;
+  }
+  .Search .left .cover {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: table;
+  }
+  .Search .left .cover .text {
+    display: table-cell;
+    height: 50%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .Search .left .cover .text h4 {
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .left .cover .text .top {
+    color: white;
+  }
+  .Search .left .cover .text .bottom {
+    color: #79facc;
+  }
+  .Search .right {
+    background-color: #b2b2b2;
+    height: 100%;
+    width: 49.5%;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    display: table;
+  }
+  .Search .right .text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .Search .right .text h4 {
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .Search .right .text .top {
+    color: white;
+  }
+  .Search .right .text .bottom {
+    color: #744dec;
+  }
+}
+
+/*# sourceMappingURL=Search.css.map */

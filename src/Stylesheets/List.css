@@ -1,0 +1,375 @@
+@keyframes ButtonHover {
+  from {
+    background: none;
+    color: #79facc;
+  }
+  to {
+    background: #79facc;
+    color: rgba(40, 40, 40, 0.95);
+  }
+}
+@keyframes Appear {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 220px;
+    opacity: 100%;
+  }
+}
+@keyframes Appear2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 250px;
+  }
+}
+@keyframes Inputs {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .List {
+    position: relative;
+    vertical-align: bottom;
+    height: 86%;
+    width: 100%;
+    background-color: #201e20;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+  .List .alphabet {
+    height: 97%;
+    width: 13%;
+    background-color: #626262;
+    border-radius: 2px;
+  }
+  .List .alphabet .alphaList {
+    margin-top: 0px;
+    height: 100%;
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .List .alphabet .alphaList .letter {
+    font-size: 0.8em;
+    cursor: pointer;
+  }
+  .List .alphabet .alphaList .letter div {
+    color: white;
+  }
+  .List .Tracks {
+    height: 100%;
+    width: 75%;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track {
+    background-color: #744dec;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track p {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track .label {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track {
+    background-color: #79facc;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track p {
+    color: black;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track .label {
+    color: black;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track {
+    background-color: #d141f2;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track p {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track .label {
+    color: white;
+  }
+  .List .Tracks ul::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+  .List .Tracks ul {
+    width: 100%;
+    margin-top: 0px;
+    list-style-type: none;
+    padding-left: 0px;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .List .Tracks ul .group {
+    display: inline-block;
+  }
+  .List .Tracks ul .group ul {
+    overflow-y: visible;
+  }
+  .List .Tracks ul li {
+    height: 70px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  .List .Tracks ul li .grouptitle {
+    display: table;
+    width: 100%;
+  }
+  .List .Tracks ul li .grouptitle div {
+    display: table-cell;
+    width: 100%;
+    text-align: center;
+    vertical-align: bottom;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+    display: inline-block;
+  }
+  .List .Tracks ul li .Track {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    display: flex;
+    box-sizing: border-box;
+  }
+  .List .Tracks ul li .Track .albart {
+    height: 55px;
+    width: 55px;
+    overflow-x: hidden;
+    margin-right: 10px;
+  }
+  .List .Tracks ul li .Track .text {
+    width: 75%;
+    height: 100%;
+  }
+  .List .Tracks ul li .Track .text .textRow {
+    width: 100%;
+  }
+  .List .Tracks ul li .Track .text .textRow .inf {
+    font-size: 0.5em;
+    font-weight: 500;
+    line-height: 110%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 25%;
+    width: 100%;
+  }
+  .List .Tracks ul li .Track .text .textRow .label {
+    font-size: 0.5em;
+    font-weight: bold;
+    line-height: 0px;
+  }
+}
+@media (min-width: 575px) {
+  .List {
+    position: relative;
+    vertical-align: bottom;
+    height: 230px;
+    width: 100%;
+    background-color: #404040;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .List .alphabet {
+    background-color: #626262;
+    height: 40px;
+    width: 97%;
+    border-radius: 2px;
+    margin: 0px auto;
+  }
+  .List .alphabet .alphaList {
+    width: 100%;
+    margin-top: 12px;
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .List .alphabet .alphaList .letter {
+    cursor: pointer;
+  }
+  .List .alphabet .alphaList .letter div {
+    color: white;
+  }
+  .List .alphabet .alphaList .letter div:hover {
+    color: #79facc;
+  }
+  .List .Tracks {
+    height: 155px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track {
+    background-color: #744dec;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track p {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+1) .Track .label {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track {
+    background-color: #79facc;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track p {
+    color: black;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+2) .Track .label {
+    color: black;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track {
+    background-color: #d141f2;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track p {
+    color: white;
+  }
+  .List .Tracks .TrackLi:nth-child(3n+3) .Track .label {
+    color: white;
+  }
+  .List .Tracks ul::-webkit-scrollbar {
+    height: 8px;
+    width: 96%;
+  }
+  .List .Tracks ul::-webkit-scrollbar-thumb {
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  .List .Tracks ul::-webkit-scrollbar-track {
+    margin: 0px 10px 0px 10px;
+    width: 96%;
+    background-color: #626262;
+    border-radius: 4px;
+  }
+  .List .Tracks ul::-webkit-scrollbar-thumb {
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  .List .Tracks ul {
+    list-style-type: none;
+    padding-left: 0px;
+    overflow-x: auto;
+    display: flex;
+    height: 155px;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .List .Tracks ul .group {
+    height: 140px;
+    display: flex;
+    width: auto;
+  }
+  .List .Tracks ul .group .grouptitle {
+    display: table;
+    height: 100%;
+  }
+  .List .Tracks ul .group .grouptitle div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10px;
+    text-align: right;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 0px;
+    letter-spacing: 0.5px;
+    font-family: Tahoma;
+    font-stretch: extra-condensed;
+  }
+  .List .Tracks ul .group ul {
+    height: 140px;
+    display: flex;
+    overflow-x: visible;
+  }
+  .List .Tracks ul .group ul li {
+    height: 140px;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    box-sizing: border-box;
+  }
+  .List .Tracks ul .TrackLi:hover {
+    padding: 2.5px;
+  }
+  .List .Tracks ul .TrackLi:hover .Track {
+    height: 135px;
+    width: 135px;
+  }
+  .List .Tracks ul .TrackLi:hover .Track .artcont .albart {
+    width: 55px;
+    height: 55px;
+  }
+  .List .Tracks ul .TrackLi:hover .Track .text .textRow .inf {
+    font-size: 0.6em;
+  }
+  .List .Tracks ul .TrackLi:hover .Track .text .textRow .label {
+    font-size: 0.6em;
+  }
+  .List .Tracks ul .TrackLi {
+    height: 140px;
+    width: 140px;
+    border-radius: 3px;
+    display: table;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .List .Tracks ul .TrackLi .Track {
+    padding: 8px;
+    height: 130px;
+    width: 130px;
+    display: table-cell;
+    display: grid;
+    vertical-align: middle;
+    grid-template-rows: 50%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .List .Tracks ul .TrackLi .Track .artcont .albart {
+    width: 50px;
+    height: 50px;
+  }
+  .List .Tracks ul .TrackLi .Track .text {
+    width: 100%;
+  }
+  .List .Tracks ul .TrackLi .Track .text .textRow .inf {
+    font-size: 0.5em;
+    font-weight: 500;
+    line-height: normal;
+    width: 100px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .List .Tracks ul .TrackLi .Track .text .textRow .label {
+    font-size: 0.5em;
+    font-weight: bold;
+    line-height: 0%;
+  }
+}
+
+/*# sourceMappingURL=List.css.map */

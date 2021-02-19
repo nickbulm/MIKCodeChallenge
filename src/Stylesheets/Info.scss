@@ -1,0 +1,227 @@
+$phone: 575px;
+$tablet: 800px;
+$dark: #201e20;
+$darkgray: #404040;
+$midgray: #626262;
+$lightgray: #b2b2b2;
+$teal: #79facc;
+$purple: #744dec;
+$pink: #d141f2; 
+@keyframes ButtonHover {
+    from {
+      background: none;
+      color: $teal;
+    }
+    to {
+      background: $teal;
+      color: rgba(40, 40, 40, .95);
+    }
+  }
+  @keyframes Appear {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 220px;
+      opacity: 100%;
+    }
+  }
+  @keyframes Appear2 {
+    from {
+      height: 0;
+    }
+    to {
+      height: 250px;
+    }
+  }
+  @keyframes Inputs {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+@media (max-width: $phone) {
+    .Info {
+        position: fixed;
+        height: 250px;
+        width: 80%;
+        padding: 8px;
+        box-sizing:border-box;
+        z-index: 1;
+        background-color: rgba(40, 40, 40, .95);
+        border-radius: 5px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        animation-name: Appear2;
+        animation-duration: .5s;
+        .artcont{
+          display: grid;
+          grid-template-columns: 40% 15% 15% 30%;
+          grid-template-rows: 30% 30% 20%;
+          .grid1 {
+            .albart{
+              height:100px;
+              width: 100px;
+              overflow-x: hidden;
+              margin-right: 10px;
+            }
+          }
+          .grid2 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            justify-content: space-between;
+            .play{
+              cursor:pointer;
+              width:24px; 
+              height:24px; 
+              color:white;
+            }
+          }
+          .grid3 {
+            text-align: right;
+            grid-column-start: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+          }
+          .grid4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            .selectSong {
+              width: 100px;
+              height: 20px;
+              color: $teal;
+              border: 1px solid $teal;
+              border-radius: 15px;
+              text-align: center;
+              font-size: .8em;
+              font-weight: bold;
+              line-height: 150%;
+              cursor: pointer;
+            }
+          }
+        }
+        .text {
+          width:90%;
+          height: 100%;
+          .textRow{
+            width:100%;
+            .inf{
+              font-size: .6em;
+              font-weight: 500;
+              line-height: normal;
+              height: 25%;
+              width:100%;
+              color:white;
+            }
+            .label {
+              font-size: .7em;
+              font-weight: bold;
+              line-height: 0px;
+              color:white;
+            }
+          }
+        }
+    }
+}
+@media (min-width: $phone) { 
+    .Info {
+        position: fixed;
+        height: 220px;
+        width: 350px;
+        left: 32.5%;
+        margin: 0px auto 0px auto;
+        padding: 8px;
+        box-sizing:border-box;
+        z-index: 1;
+        background-color: rgba(40, 40, 40, .95);
+        border-radius: 5px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        animation-name: Appear;
+        animation-duration: 1s;
+        .artcont{
+          display: grid;
+          grid-template-columns: 40% 15% 15% 30%;
+          grid-template-rows: 30% 30% 20%;
+          .grid1 {
+            .albart{
+              height:100px;
+              width: 100px;
+              overflow-x: hidden;
+              margin-right: 10px;
+            }
+          }
+          .grid2 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            display: flex;
+            justify-content: space-between;
+            .play{
+              cursor:pointer;
+              width:24px; 
+              height:24px; 
+              color:white;
+            }
+          }
+          .grid3 {
+            text-align: right;
+            grid-column-start: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+          }
+          .grid4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            .selectSong {
+              width: 100px;
+              height: 20px;
+              color: $teal;
+              border: 1px solid $teal;
+              border-radius: 15px;
+              text-align: center;
+              font-size: .8em;
+              font-weight: bold;
+              line-height: 150%;
+              cursor: pointer;
+            }
+            .selectSong:hover {
+              color: rgba(40, 40, 40, .95);
+              background-color: $teal;
+              animation-name: ButtonHover;
+              animation-duration: .5s;
+            }
+          }
+        }
+        .text {
+          width:90%;
+          height: 100%;
+          .textRow{
+            width:100%;
+            .inf{
+              font-size: .5em;
+              font-weight: 500;
+              line-height: normal;
+              height: 25%;
+              width:100%;
+              color:white;
+            }
+            .label {
+              font-size: .6em;
+              font-weight: bold;
+              line-height: 0px;
+              color:white;
+            }
+          }
+        }
+    }
+}

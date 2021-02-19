@@ -1,0 +1,285 @@
+$phone: 575px;
+$tablet: 800px;
+$dark: #201e20;
+$darkgray: #404040;
+$midgray: #626262;
+$lightgray: #b2b2b2;
+$teal: #79facc;
+$purple: #744dec;
+$pink: #d141f2; 
+@keyframes ButtonHover {
+    from {
+      background: none;
+      color: $teal;
+    }
+    to {
+      background: $teal;
+      color: rgba(40, 40, 40, .95);
+    }
+  }
+  @keyframes Appear {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 220px;
+      opacity: 100%;
+    }
+  }
+  @keyframes Appear2 {
+    from {
+      height: 0;
+    }
+    to {
+      height: 250px;
+    }
+  }
+  @keyframes Inputs {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+@media (max-width: $phone) {
+    .Search {
+        width: 100%;
+        height: 11%;
+        display: flex;
+        justify-content: space-between;
+        .left:hover {
+          animation-name: Inputs;
+          animation-duration: .5s;
+          .cover {
+            display: none;
+          }
+          .inputs {
+            display: flex;
+            
+          }
+        }
+        .left {
+          height: 100%;
+          width: 48%;
+          background-color: $darkgray;
+          border-radius: 2px;
+          .inputs {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            label {
+              font-size: 1em;
+              color:$teal;
+              font-weight: 550;
+              letter-spacing: .5px;
+              font-family: Tahoma;
+              font-stretch:extra-condensed;
+            }
+            .search {
+              margin: 0px auto 0px auto;
+              height: 25px;
+              border-radius: 13px;
+              width: 90%;
+              background-color: #eee;
+              display: grid;
+              grid-template-columns: 15% 85%;
+              text-align: center;
+              svg {
+                margin: 5px 0px 0px 4px;
+                color:rgba(40, 40, 40, .95);
+              }
+              input{
+                border: none;
+                width: 80%;
+                height: 98%;
+                background: none;
+                outline: none;
+              }
+            }
+          }
+          .cover {
+            height: 100%;
+            width: 100%;
+            display: table;
+            .text{
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+              h4{
+                font-size: .8em;
+                font-weight: 600;
+                line-height: 0px;
+                letter-spacing: .5px;
+                font-family: Tahoma;
+                font-stretch:extra-condensed;
+              }
+              .top{
+                color: white;
+                
+              }
+              .bottom{
+                color: $teal;
+              }
+            }
+            
+          }
+        }
+        .right {
+          background-color: $lightgray;
+          height: 100%;
+          width: 48%;
+          border-radius: 2px;
+          text-align: center;
+          display: table;
+          .text{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            h4{
+              font-size: .8em;
+              font-weight: 600;
+              line-height: 0px;
+              letter-spacing: .5px;
+              font-family: Tahoma;
+              font-stretch:extra-condensed;
+            }
+            .top{
+              color: white;
+              
+            }
+            .bottom{
+              color: $purple;
+            }
+          }
+        }
+    }
+}
+@media (min-width: $phone) { 
+    .Search {
+        width: 100%;
+        height: 22%;
+        display: flex;
+        justify-content: space-between;
+        .left:hover {
+          animation-name: Inputs;
+          animation-duration: .5s;
+          .cover {
+            display: none;
+          }
+          .inputs {
+            display: flex;
+          }
+        }
+        .left{
+          height: 100%;
+          width: 49.5%;
+          background-color: $darkgray;
+          border-radius: 4px;
+          cursor: pointer;
+          .inputs {
+            border-radius: 2px;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            text-align: center;
+            display: none; 
+            flex-direction: column;
+            justify-content: space-evenly;
+            animation: Inputs 1s;
+            label {
+              font-size: 1em;
+              color:$teal;
+              font-weight: 550;
+              letter-spacing: .5px;
+              font-family: Tahoma;
+              font-stretch:extra-condensed;
+            }
+            .search {
+              margin: 0px auto 0px auto;
+              height: 20px;
+              border-radius: 13px;
+              width: 60%;
+              background-color: #eee;
+              display: grid;
+              grid-template-columns: 15% 85%;
+              text-align: center;
+              svg {
+                margin: 3px 0px 0px 4px;
+                color:rgba(40, 40, 40, .95);
+              }
+              input{
+                border: none;
+                width: 85%;
+                height: 100%;
+                background: none;
+                outline: none;
+                font-family: Tahoma;
+                line-height: none;
+              }
+            }
+          }
+          .cover {
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: table;
+            .text{
+              display: table-cell;
+              height: 50%;
+              text-align: center;
+              vertical-align: middle;
+              h4{
+                font-size: .8em;
+                font-weight: 600;
+                line-height: 0px;
+                letter-spacing: .5px;
+                font-family: Tahoma;
+                font-stretch:extra-condensed;
+              }
+              .top{
+                color: white;
+                
+              }
+              .bottom{
+                color: $teal;
+              }
+            }
+          }
+        }
+        .right {
+          background-color: $lightgray;
+          height: 100%;
+          width: 49.5%;
+          border-radius: 4px;
+          text-align: center;
+          box-sizing: border-box;
+          display: table;
+          .text{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            h4{
+              font-size: .8em;
+              font-weight: 600;
+              line-height: 0px;
+              letter-spacing: .5px;
+              font-family: Tahoma;
+              font-stretch:extra-condensed;
+            }
+            .top{
+              color: white;
+              
+            }
+            .bottom{
+              color: $purple;
+            }
+          }
+        }
+    }
+}
